@@ -1,0 +1,251 @@
+/* ABOUT PAGE STYLING */
+.about-page {
+  background-color: var(--bg-primary);
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-title-left {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.about-story-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(248, 248, 248, 0.85);
+  margin-bottom: 20px;
+}
+
+.about-story-stats {
+  display: flex;
+  gap: 36px;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-gold);
+}
+
+.about-stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-stat-box strong {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.about-stat-box span {
+  font-size: 12px;
+  color: var(--gold-soft);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-image-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+}
+
+/* CREATIVE PILLARS */
+.pillars-section {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pillar-card {
+  padding: 40px 30px;
+  text-align: center;
+  height: 100%;
+}
+
+.pillar-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.pillar-card h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+
+.pillar-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(248, 248, 248, 0.75);
+}
+
+/* ELEGANT TIMELINE SECTION */
+.timeline-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-gold);
+  position: relative;
+  padding: 100px 0;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Vertical Gold Center Line */
+.timeline-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.8) 50%, rgba(212, 175, 55, 0.1) 100%);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-row {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.timeline-row.left-row {
+  justify-content: flex-start;
+  padding-right: 50%;
+}
+
+.timeline-row.right-row {
+  justify-content: flex-end;
+  padding-left: 50%;
+}
+
+/* Glowing Gold Dot */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0A0A0A;
+  border: 2px solid var(--gold-luxury);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-luxury);
+}
+
+.timeline-card {
+  padding: 30px;
+  width: 90%;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+}
+
+.timeline-row.left-row .timeline-card {
+  margin-right: 40px;
+}
+
+.timeline-row.right-row .timeline-card {
+  margin-left: 40px;
+}
+
+.timeline-year {
+  font-size: 28px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-size: 22px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(248, 248, 248, 0.8);
+  margin: 0;
+}
+
+/* ABOUT CTA */
+.about-cta-card {
+  padding: 80px 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-cta-card h2 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.about-cta-card p {
+  font-size: 15px;
+  color: var(--gold-soft);
+  max-width: 650px;
+  margin: 0 auto 36px auto;
+}
+
+@media (max-width: 900px) {
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-center-line {
+    left: 20px;
+  }
+
+  .timeline-row.left-row,
+  .timeline-row.right-row {
+    padding-left: 50px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  .timeline-row.left-row .timeline-card,
+  .timeline-row.right-row .timeline-card {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}

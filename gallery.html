@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | PB Photography — Indian Wedding Portfolio</title>
+    <meta name="description" content="Explore the luxury wedding photography portfolio of PB Photography — featuring Telugu weddings, pre-wedding shoots, traditional ceremonies, candid moments, baby shoots, and drone photography." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">PB</span>
+          <span>PB Photography</span>
+        </a>
+        <nav class="site-nav" id="siteNav">
+          <button class="close-nav" id="closeNav" aria-label="Close menu">×</button>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html" class="active">Gallery</a>
+          <a href="services.html">Services</a>
+          <a href="albums.html">Albums</a>
+          <a href="index.html#ai-assistant">AI Assistant</a>
+          <a href="appointment.html">Appointment</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero gallery-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-copy reveal">
+          <p class="eyebrow">Gallery</p>
+          <h1>Every frame, a timeless memory.</h1>
+          <p>A curated collection of Telugu wedding photography, traditional ceremonies, pre-wedding stories, and intimate portraits — all captured with cinematic beauty.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal" style="text-align: center; max-width: 900px; margin: 0 auto 48px auto;">
+            <p class="eyebrow" style="justify-content: center;">Portfolio</p>
+            <h2>Every photograph tells a story worth remembering.</h2>
+          </div>
+          
+          <!-- Premium Smart Gallery Search -->
+          <div class="premium-ai-search reveal">
+            <span class="spark-icon">✨</span>
+            <input type="text" id="ai-gallery-search" placeholder="Search gallery with AI..." />
+            <button id="ai-search-btn">Search</button>
+          </div>
+
+          <div class="filter-bar reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Wedding</button>
+            <button class="filter-btn" data-filter="traditional">Traditional</button>
+            <button class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
+            <button class="filter-btn" data-filter="candid">Candid</button>
+            <button class="filter-btn" data-filter="family">Family</button>
+            <button class="filter-btn" data-filter="baby">Baby Shoot</button>
+            <button class="filter-btn" data-filter="drone">Drone</button>
+            <button class="filter-btn" data-filter="cinematic">Cinematic Films</button>
+          </div>
+          <div class="gallery-grid reveal" id="galleryGrid">
+
+            <!-- FIRST ROW (Three Strongest Photographs) -->
+            <!-- 1. Bride Portrait -->
+            <article class="gallery-card" data-category="wedding">
+              <img loading="lazy" src="gallery/bride_prep.jpg" alt="Indian Bride Portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Wedding — Bride Portrait</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Couple Portrait -->
+            <article class="gallery-card" data-category="wedding">
+              <img loading="lazy" src="gallery/couple_red_backdrop.jpg" alt="Indian Couple Portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Wedding — Couple Portrait</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Mangalsutra / Sacred Ritual -->
+            <article class="gallery-card" data-category="traditional">
+              <img loading="lazy" src="gallery/hands_holding_coconut.jpg" alt="Indian Wedding Mangalsutra Ceremony" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Traditional — Sacred Ritual</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- WEDDING CATEGORY -->
+            <article class="gallery-card" data-category="wedding">
+              <img loading="lazy" src="gallery/bride_bangles.jpg" alt="Telugu Bride Portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Wedding — Bridal Moment</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="wedding">
+              <img loading="lazy" src="gallery/talambralu.jpg" alt="Telugu Wedding Mandap Ceremony" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Wedding — Mandap Ceremony</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="wedding">
+              <img loading="lazy" src="gallery/forehead_kiss.jpg" alt="Traditional Indian Bride portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Wedding — Bridal Beauty</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- TRADITIONAL CATEGORY -->
+            <article class="gallery-card" data-category="traditional">
+              <img loading="lazy" src="gallery/fire_ritual.jpg" alt="Traditional Indian Wedding Ceremony" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Traditional — Sacred Ceremony</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="traditional">
+              <img loading="lazy" src="gallery/foot_on_rice.jpg" alt="Telugu Wedding Customs" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Traditional — Heritage Customs</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="traditional">
+              <img loading="lazy" src="gallery/pouring_water.jpg" alt="Indian Haldi Ritual Setup" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Traditional — Haldi Ceremony</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="traditional">
+              <img loading="lazy" src="gallery/henna_palms.jpg" alt="Bridal Mehendi Design" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Traditional — Mehendi Evening</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRE-WEDDING CATEGORY -->
+            <article class="gallery-card" data-category="pre-wedding">
+              <img loading="lazy" src="gallery/couple_holding_hands.jpg" alt="Pre Wedding Shoot Story" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Pre-Wedding — Romantic Story</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="pre-wedding">
+              <img loading="lazy" src="gallery/couple_holding_pinky.jpg" alt="Pre Wedding Golden Hour Embrace" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Pre-Wedding — Golden Light</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="pre-wedding">
+              <img loading="lazy" src="gallery/foot_on_stone.jpg" alt="Outdoor pre-wedding portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Pre-Wedding — Outdoor Editorial</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- CANDID CATEGORY -->
+            <article class="gallery-card" data-category="candid">
+              <img loading="lazy" src="gallery/bride_tongue_candid.jpg" alt="Candid Wedding Emotion laughter" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Candid — Unscripted Emotion</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="candid">
+              <img loading="lazy" src="gallery/toe_ring_ritual.jpg" alt="Family candid gathering moment" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Candid — Family Celebration</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- FAMILY CATEGORY -->
+            <article class="gallery-card" data-category="family">
+              <img loading="lazy" src="starting-photo.png" alt="Family sunset portrait by PB Photography" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Family — Sunset Portrait</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="family">
+              <img loading="lazy" src="gallery/bride_henna_hands.jpg" alt="Outdoor family photo" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Family — Natural Session</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- BABY SHOOT CATEGORY -->
+            <article class="gallery-card" data-category="baby">
+              <img loading="lazy" src="gallery/henna_feet.jpg" alt="Cute baby studio portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Baby Shoot — Studio Light</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="baby">
+              <img loading="lazy" src="gallery/henna_ring.jpg" alt="Newborn baby portrait" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Baby Shoot — Newborn Frame</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DRONE CATEGORY -->
+            <article class="gallery-card" data-category="drone">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=85" alt="Drone view of traditional wedding venue" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Drone — Aerial Wedding Venue</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="drone">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=900&q=85" alt="Aerial view of cinematic resort mandap" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Drone — Cinematic Landscape</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- CINEMATIC FILMS CATEGORY -->
+            <article class="gallery-card" data-category="cinematic">
+              <img loading="lazy" src="starting-photo.png" alt="Cinematic video highlight scene" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Cinematic Films — Sunset Story</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="cinematic">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85" alt="Cinematic temple shoot frame" />
+              <div class="gallery-hover-overlay">
+                <div class="gallery-hover-content">
+                  <span class="view-story-btn">View Story</span>
+                  <span class="category-tag">Cinematic Films — Dramatic Light</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeLightbox" aria-label="Close preview">×</button>
+        <img id="lightboxImage" alt="Gallery preview" />
+        <!-- AI Caption Generator -->
+        <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000; text-align: center; width: 90%; max-width: 600px;">
+          <button id="ai-caption-btn" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">✨ Generate AI Captions</button>
+          <div id="ai-caption-box" class="ai-caption-box">
+            <!-- Captions will appear here -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark">PB</span><span>PB Photography</span></a>
+          <p>Every family deserves memories that will live for generations. Thank you for trusting PB Photography to preserve your story.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Albums</h3>
+          <ul>
+            <li><a href="albums.html">Heirloom Albums</a></li>
+            <li><a href="albums.html">Photo Books</a></li>
+            <li><a href="albums.html">Designer Covers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="https://wa.me/919642534945" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 PB Photography. Crafting timeless memories since 2018.</p>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+/* Package Comparison Styles */
+
+.package-comparison-container {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(244, 208, 63, 0.05) 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.comparison-header {
+  margin-bottom: 2rem;
+}
+
+.comparison-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.comparison-header p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.comparison-content {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Packages Selection */
+.packages-selection {
+  margin-bottom: 2rem;
+}
+
+.selection-info {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.package-card-selection {
+  position: relative;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.package-card-selection:hover {
+  border-color: #d4af37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+
+.package-card-selection.selected {
+  border-color: #d4af37;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(244, 208, 63, 0.05) 100%);
+}
+
+.package-checkbox {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.package-card-selection.selected .package-checkbox {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+.package-card-selection h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  padding-right: 1.5rem;
+}
+
+.package-price {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+.package-duration {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* Comparison Context */
+.comparison-context {
+  margin-bottom: 2rem;
+}
+
+.comparison-context label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+}
+
+.comparison-context textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.comparison-context textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Comparison Actions */
+.comparison-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.compare-button {
+  flex: 1;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  color: #1a1a1a;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.compare-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.compare-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comparison-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(26, 26, 26, 0.2);
+  border-top-color: #1a1a1a;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Comparison Result */
+.comparison-result {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.result-header h4 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1rem;
+}
+
+.comparison-text {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(244, 208, 63, 0.05) 100%);
+  border-left: 4px solid #d4af37;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Result Actions */
+.result-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.secondary-button {
+  background: white;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+}
+
+.secondary-button:hover {
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  color: #1a1a1a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .package-comparison-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .comparison-content {
+    padding: 1rem;
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .action-button {
+    width: 100%;
+  }
+}

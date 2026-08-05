@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | PB Photography — Our Story & Team</title>
+    <meta name="description" content="About PB Photography — a premium Telugu wedding photography studio in Vijayawada, crafting timeless memories with cinematic artistry and emotional storytelling since 2018." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ─── STUDIO JOURNEY TIMELINE (about-page specific) ─── */
+      .journey-section {
+        padding: 96px 0;
+        background: rgba(255, 250, 244, 0.03);
+      }
+
+      .timeline-wrapper {
+        position: relative;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(to bottom, var(--accent), rgba(196, 156, 86, 0.08));
+        transform: translateX(-50%);
+      }
+
+      .timeline-row {
+        display: grid;
+        grid-template-columns: 1fr 48px 1fr;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 48px;
+        position: relative;
+      }
+
+      .timeline-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-left {
+        text-align: right;
+        padding-right: 32px;
+      }
+
+      .timeline-right {
+        text-align: left;
+        padding-left: 32px;
+      }
+
+      .timeline-center {
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .timeline-node {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 3px solid #120f0c;
+        box-shadow: 0 0 0 1px var(--accent), 0 0 18px rgba(196, 156, 86, 0.3);
+      }
+
+      .timeline-year-label {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.9rem;
+        color: var(--accent);
+        font-weight: 600;
+        display: block;
+        line-height: 1;
+      }
+
+      .timeline-milestone {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin-top: 4px;
+        line-height: 1.5;
+      }
+
+      .timeline-milestone strong {
+        display: block;
+        color: var(--text);
+        font-size: 1rem;
+        margin-bottom: 2px;
+      }
+
+      /* On smaller screens, collapse timeline to vertical */
+      @media (max-width: 680px) {
+        .timeline-line {
+          left: 20px;
+        }
+        .timeline-row {
+          grid-template-columns: 40px 1fr;
+          grid-template-rows: auto;
+        }
+        .timeline-left {
+          display: none;
+        }
+        .timeline-center {
+          grid-column: 1;
+          grid-row: 1;
+        }
+        .timeline-right {
+          grid-column: 2;
+          grid-row: 1;
+          padding-left: 20px;
+          text-align: left;
+        }
+        /* Show year inline on mobile */
+        .timeline-right .timeline-year-label {
+          display: block;
+        }
+      }
+
+      /* ─── TEAM SECTION ─── */
+      .team-section {
+        padding: 96px 0;
+      }
+
+      /* Stat cards in about-stats */
+      .about-stats .stat-card {
+        background: rgba(255, 250, 244, 0.04);
+        border: 1px solid rgba(255, 250, 244, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">PB</span>
+          <span>PB Photography</span>
+        </a>
+        <nav class="site-nav" id="siteNav">
+          <button class="close-nav" id="closeNav" aria-label="Close menu">×</button>
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="services.html">Services</a>
+          <a href="albums.html">Albums</a>
+          <a href="index.html#ai-assistant">AI Assistant</a>
+          <a href="appointment.html">Appointment</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- PAGE HERO -->
+      <section class="page-hero about-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-copy reveal">
+          <p class="eyebrow">Preserving Sacred Legacies</p>
+          <h1>Why PB Photography Exists</h1>
+          <p>We exist to capture the soul of Indian celebrations — the early morning temple bells, the fragrance of fresh jasmine, the quiet tears of parents, and the sacred ties that connect generations forever.</p>
+          <a class="btn btn-secondary" href="appointment.html">Begin Your Story</a>
+        </div>
+      </section>
+
+      <!-- VISION & STATS -->
+      <section class="section section-soft">
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <h2>To capture the warmth, nostalgia, and sacred customs that tell your family's true story.</h2>
+            <p>At PB Photography, we believe that a wedding is not a corporate event to be documented, but a sacred journey. We step into your celebration as part of the family, honoring every Telugu ritual, capturing the soft laughter of children, and documenting the blessings of grandparents with absolute reverence.</p>
+            <p style="margin-top: 16px;">We do not just take photos; we weave visual poetry. Every frame is handcrafted to ensure that when you look back decades from now, you do not just see how the day looked — you feel the exact warmth of the morning sun and the love that bound your family together.</p>
+          </div>
+          <div class="about-stats reveal">
+            <article class="stat-card">
+              <strong>2018</strong>
+              <span>Preserving traditions since 2018</span>
+            </article>
+            <article class="stat-card">
+              <strong>1200+</strong>
+              <span>Stories beautifully preserved</span>
+            </article>
+            <article class="stat-card">
+              <strong>4.9 ★</strong>
+              <span>Trusted for emotional depth</span>
+            </article>
+            <article class="stat-card">
+              <strong>15+</strong>
+              <span>Years of combined dedication</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE STAND FOR -->
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Our Philosophy</p>
+            <h2>Preserving what matters most.</h2>
+          </div>
+          <div class="feature-grid reveal">
+            <article class="feature-card">
+              <h3>Emotional Authenticity</h3>
+              <p>We capture the quiet, real moments — a mother adjusting a bride's saree, a father holding back tears, and the genuine laughter of family members.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Heritage Reverence</h3>
+              <p>Every Telugu ritual has deep spiritual meaning. We approach each custom — from Jeelakarra Bellam to Talambralu — with respect and cultural awareness.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Warmth & Nostalgia</h3>
+              <p>Our color grading and compositions reflect the golden warmth of early morning sunrays, antique jewelry tones, and sandalwood vibes.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Heirloom Artistry</h3>
+              <p>We craft premium leather-bound albums and slow-motion wedding films designed to become family treasures passed down for generations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDIO JOURNEY TIMELINE -->
+      <section class="journey-section">
+        <div class="container">
+          <div class="section-heading reveal" style="margin: 0 auto 56px; text-align: center; max-width: 600px;">
+            <p class="eyebrow" style="justify-content: center;">Our Journey</p>
+            <h2>From a single camera to a full studio — built on trust, one wedding at a time.</h2>
+          </div>
+
+          <div class="timeline-wrapper reveal">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <span class="timeline-year-label">2018</span>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-node"></div>
+              </div>
+              <div class="timeline-right">
+                <div class="timeline-milestone">
+                  <strong>Studio Founded</strong>
+                  PB Photography opens in Vijayawada, Andhra Pradesh — with a vision for luxury storytelling.
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <div class="timeline-milestone" style="text-align: right;">
+                  <strong>100 Weddings</strong>
+                  A major milestone. Word-of-mouth begins spreading across Andhra Pradesh.
+                </div>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-node"></div>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-year-label">2020</span>
+              </div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <span class="timeline-year-label">2022</span>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-node"></div>
+              </div>
+              <div class="timeline-right">
+                <div class="timeline-milestone">
+                  <strong>500 Weddings</strong>
+                  The studio grows to a full team — photographers, cinematographers, and editors — serving clients across Andhra Pradesh and Telangana.
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <div class="timeline-milestone" style="text-align: right;">
+                  <strong>Destination Weddings</strong>
+                  PB Photography begins covering destination weddings — from Goa to Rajasthan to abroad.
+                </div>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-node"></div>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-year-label">2023</span>
+              </div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <span class="timeline-year-label">Today</span>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-node" style="background: var(--accent-light); box-shadow: 0 0 0 1px var(--accent-light), 0 0 24px rgba(196, 156, 86, 0.5);"></div>
+              </div>
+              <div class="timeline-right">
+                <div class="timeline-milestone">
+                  <strong>1200+ Weddings & Growing</strong>
+                  PB Photography stands as Vijayawada's most trusted luxury wedding studio — with a legacy built on love, trust, and timeless imagery.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="team-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">The Team</p>
+            <h2>The artists behind every timeless frame.</h2>
+          </div>
+          <div class="team-grid reveal">
+
+            <div class="team-card">
+              <div class="team-avatar">P</div>
+              <h3>Prasad Babu</h3>
+              <span class="role">Founder & Lead Photographer</span>
+              <p>With 15+ years of experience in Telugu wedding photography, Prasad brings a cinematic vision and deep cultural sensitivity to every assignment.</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-avatar">R</div>
+              <h3>Ravi Kumar</h3>
+              <span class="role">Lead Cinematographer</span>
+              <p>Ravi crafts wedding films with a storyteller's heart — weaving ritual, emotion, and music into cinematic masterpieces that last a lifetime.</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-avatar">S</div>
+              <h3>Srikanth Reddy</h3>
+              <span class="role">Senior Photographer</span>
+              <p>Specialising in candid and traditional photography, Srikanth has an instinct for the unrepeatable moments that make every wedding unique.</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-avatar">A</div>
+              <h3>Anitha Devi</h3>
+              <span class="role">Lead Editor & Album Designer</span>
+              <p>Anitha's eye for colour, narrative, and layout transforms raw photographs into beautifully curated albums and cinematic galleries.</p>
+            </div>
+
+          </div>
+
+          <p style="text-align: center; margin-top: 40px; font-size: 0.88rem; color: var(--muted); opacity: 0.7;">
+            Team photographs will be added soon. Contact us to meet the studio team in person.
+          </p>
+        </div>
+      </section>
+
+      <!-- STORY CARDS -->
+      <section class="section section-soft">
+        <div class="container story-grid reveal">
+          <article class="story-card">
+            <h3>Rooted in Vijayawada</h3>
+            <p>Born and raised in the heart of Andhra Pradesh, we understand the rituals, the traditions, and the emotions of Telugu weddings more deeply than anyone.</p>
+          </article>
+          <article class="story-card">
+            <h3>Cinematic by nature</h3>
+            <p>Every image we capture is composed like a frame from a film — with depth, light, and intentional emotion guiding every decision.</p>
+          </article>
+          <article class="story-card">
+            <h3>Trusted by 1200+ families</h3>
+            <p>Our reputation is built entirely on the trust of the families we serve. 80% of our bookings come through referrals from past clients.</p>
+          </article>
+          <article class="story-card">
+            <h3>Heirloom-quality delivery</h3>
+            <p>Every album, film, and gallery we deliver is designed to be passed down — a family treasure that grows more precious with every year.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark">PB</span><span>PB Photography</span></a>
+          <p>Every family deserves memories that will live for generations. Thank you for trusting PB Photography to preserve your story.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Albums</h3>
+          <ul>
+            <li><a href="albums.html">Heirloom Albums</a></li>
+            <li><a href="albums.html">Photo Books</a></li>
+            <li><a href="albums.html">Designer Covers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="https://wa.me/919642534945" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 PB Photography. Crafting timeless memories since 2018.</p>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

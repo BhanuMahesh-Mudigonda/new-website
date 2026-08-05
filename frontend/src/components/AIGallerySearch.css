@@ -1,0 +1,320 @@
+/* ===================================================
+   AI GALLERY SEARCH — Luxury Dark Semantic Search
+=================================================== */
+
+.ai-gallery-search {
+  background: rgba(255, 250, 244, 0.03);
+  border: 1px solid rgba(255, 250, 244, 0.08);
+  border-radius: 24px;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+}
+
+/* Header */
+.ags-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.ags-spark {
+  font-size: 22px;
+  color: var(--accent);
+  line-height: 1;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.ags-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.ags-header p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Search Form */
+.ags-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ags-input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ags-search-icon {
+  position: absolute;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.ags-input {
+  width: 100%;
+  padding: 14px 42px 14px 50px;
+  background: rgba(255, 250, 244, 0.05);
+  border: 1px solid rgba(255, 250, 244, 0.12);
+  border-radius: 14px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.28s ease;
+  box-sizing: border-box;
+}
+
+.ags-input:focus {
+  border-color: rgba(203, 161, 88, 0.5);
+  background: rgba(255, 250, 244, 0.08);
+  box-shadow: 0 0 0 3px rgba(203, 161, 88, 0.1);
+}
+
+.ags-input::placeholder {
+  color: rgba(204, 167, 114, 0.4);
+  font-style: italic;
+}
+
+.ags-input:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.ags-clear-btn {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  font-family: inherit;
+  line-height: 1;
+}
+.ags-clear-btn:hover { opacity: 1; }
+
+.ags-search-btn {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, var(--accent-dark, #94713c), var(--accent, #cba158));
+  border: none;
+  border-radius: 14px;
+  color: #0d0a08;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  white-space: nowrap;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.ags-search-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(203, 161, 88, 0.3);
+}
+
+.ags-search-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.ags-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(13, 10, 8, 0.3);
+  border-top-color: #0d0a08;
+  border-radius: 50%;
+  animation: agsSpinning 0.7s linear infinite;
+}
+
+@keyframes agsSpinning { to { transform: rotate(360deg); } }
+
+/* Suggestion Chips */
+.ags-suggestions { margin-top: 4px; }
+
+.ags-suggestions-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(204, 167, 114, 0.5);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.ags-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ags-chip {
+  padding: 6px 14px;
+  background: rgba(203, 161, 88, 0.07);
+  border: 1px solid rgba(203, 161, 88, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-family: inherit;
+}
+.ags-chip:hover {
+  background: rgba(203, 161, 88, 0.18);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Results Header */
+.ags-results-section { margin-top: 24px; }
+
+.ags-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 250, 244, 0.07);
+}
+
+.ags-results-header h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.ags-clear-search {
+  font-size: 12px;
+  color: var(--muted);
+  background: none;
+  border: 1px solid rgba(255, 250, 244, 0.1);
+  border-radius: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.ags-clear-search:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Results Grid */
+.ags-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ags-result-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s;
+}
+.ags-result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.ags-result-img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.ags-result-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.ags-result-card:hover img { transform: scale(1.06); }
+
+.ags-result-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(11,8,6,0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.ags-result-card:hover .ags-result-overlay { opacity: 1; }
+
+.ags-result-overlay h5 {
+  font-size: 13px;
+  color: #faf6ee;
+  margin-bottom: 4px;
+}
+
+.ags-category-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* No Results */
+.ags-no-results {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.ags-no-results-icon {
+  font-size: 40px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.ags-no-results h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.ags-no-results p {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.ags-no-results strong { color: var(--accent); }
+
+.ags-similar-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .ai-gallery-search { padding: 20px; }
+  .ags-results-grid { grid-template-columns: repeat(2, 1fr); }
+  .ags-form { flex-direction: column; }
+  .ags-search-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .ags-results-grid { grid-template-columns: 1fr; }
+}

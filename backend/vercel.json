@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server.js"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "public/assets/$1"
+    },
+    {
+      "src": "/gallery/(.*)",
+      "dest": "public/gallery/$1"
+    },
+    {
+      "src": "/hero-wedding-video.mp4",
+      "dest": "public/hero-wedding-video.mp4"
+    },
+    {
+      "src": "/starting-photo.png",
+      "dest": "public/starting-photo.png"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/index.html"
+    }
+  ]
+}

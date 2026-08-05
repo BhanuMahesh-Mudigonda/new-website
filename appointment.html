@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment | PB Photography</title>
+    <meta name="description" content="Book a premium photography or videography consultation with PB Photography. Choose date, time, event type, and package preferences." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">PB</span>
+          <span>PB Photography</span>
+        </a>
+        <nav class="site-nav" id="siteNav">
+          <button class="close-nav" id="closeNav" aria-label="Close menu">×</button>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="services.html">Services</a>
+          <a href="albums.html">Albums</a>
+          <a href="index.html#ai-assistant">AI Assistant</a>
+          <a href="appointment.html" class="active">Appointment</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero appointment-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-copy reveal">
+          <p class="eyebrow">Appointment</p>
+          <h1>Reserve a premium photography experience with thoughtful detail and elegant service.</h1>
+          <p>Choose your date, time, event type, package, and preferences in a luxurious booking flow.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container form-shell reveal">
+          <div class="booking-card">
+            <form class="booking-form" id="bookingForm">
+              <div class="form-row">
+                <div class="form-group form-field">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" placeholder="Enter your full name" required />
+                </div>
+                <div class="form-group form-field">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group form-field">
+                  <label for="emailAddress">Email Address</label>
+                  <input type="email" id="emailAddress" placeholder="Enter your email address" required />
+                </div>
+                <div class="form-group form-field">
+                  <label for="eventType">Event Type</label>
+                  <select id="eventType" required>
+                    <option value="" disabled selected>Select Event Type</option>
+                    <option>Wedding</option>
+                    <option>Reception</option>
+                    <option>Engagement</option>
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                    <option>Baby Shower</option>
+                    <option>Corporate Event</option>
+                    <option>Fashion Shoot</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group form-field">
+                  <label for="budget">Budget</label>
+                  <select id="budget">
+                    <option value="" disabled selected>Select Budget Range</option>
+                    <option value="under_50k">Under 50,000 INR</option>
+                    <option value="50k_1lakh">50,000 - 1 Lakh INR</option>
+                    <option value="1lakh_2lakhs">1 Lakh - 2 Lakhs INR</option>
+                    <option value="above_2lakhs">Above 2 Lakhs INR</option>
+                  </select>
+                </div>
+                <div class="form-group form-field">
+                  <label for="guestCount">Guest Count</label>
+                  <input type="number" id="guestCount" placeholder="Estimated guests" />
+                </div>
+              </div>
+
+              <!-- Dynamic AI Card Injected Here -->
+              <div id="dynamic-ai-recommendation" class="dynamic-ai-card">
+                <div class="dynamic-ai-card-header">
+                  <h4>✨ AI Recommendation</h4>
+                </div>
+                <p id="dynamic-ai-recommendation-text"></p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group form-field">
+                  <label for="packageType">Package</label>
+                  <select id="packageType" required>
+                    <option value="" disabled selected>Choose Package</option>
+                    <option>Signature</option>
+                    <option>Deluxe</option>
+                    <option>Premium</option>
+                    <option>Editorial</option>
+                  </select>
+                </div>
+                <div class="form-group form-field">
+                  <label for="location">Location</label>
+                  <input type="text" id="location" placeholder="Enter your event location" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group form-field">
+                  <label for="preferredDate">Preferred Date</label>
+                  <input type="text" id="preferredDate" placeholder="Select your preferred date" readonly required />
+                </div>
+                <div class="form-group form-field">
+                  <label for="preferredTime">Preferred Time</label>
+                  <input type="text" id="preferredTime" placeholder="Select your preferred time" readonly required />
+                </div>
+              </div>
+
+              <div class="form-group form-field textarea-field" style="margin-top: 15px;">
+                <label for="specialRequests">Tell us about your event</label>
+                <textarea id="specialRequests" rows="4" placeholder="Describe your vision, style, and any specific requests..." ></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit" style="margin-top: 20px; width: 100%;">Request Appointment</button>
+              <div class="form-success" id="formSuccess">Thank you. Your request is received. We’ll contact you soon.</div>
+            </form>
+          </div>
+          <aside class="booking-info">
+            <h3>Booking with PB Photography</h3>
+            <p>Enjoy a premium consultation, curated shooting plan, and elegant delivery experience. We tailor every detail to your celebration and style.</p>
+            <ul>
+              <li>Custom event planning support</li>
+              <li>Tailored album and film recommendations</li>
+              <li>Professional schedule guidance</li>
+              <li>Warm, responsive communication</li>
+            </ul>
+            <div class="calendar-card">
+              <div class="calendar-header">
+                <button class="calendar-nav" id="prevMonth" type="button" aria-label="Previous month">←</button>
+                <h3 id="calendarTitle">Choose a date</h3>
+                <button class="calendar-nav" id="nextMonth" type="button" aria-label="Next month">→</button>
+              </div>
+              <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+            <div class="time-grid" id="timeGrid"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark">PB</span><span>PB Photography</span></a>
+          <p>Every family deserves memories that will live for generations. Thank you for trusting PB Photography to preserve your story.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Albums</h3>
+          <ul>
+            <li><a href="albums.html">Heirloom Albums</a></li>
+            <li><a href="albums.html">Photo Books</a></li>
+            <li><a href="albums.html">Designer Covers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="https://wa.me/919642534945" target="_blank">WhatsApp 1</a> | <a href="https://wa.me/918008360032" target="_blank">WhatsApp 2</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 PB Photography. Crafted for timeless stories.</p>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

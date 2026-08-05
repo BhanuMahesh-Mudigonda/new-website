@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | PB Photography — Indian Wedding Photography Services</title>
+    <meta name="description" content="Explore premium Indian wedding photography and videography services by PB Photography — wedding, pre-wedding, cinematography, baby shoots, drone photography, and luxury albums." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">PB</span>
+          <span>PB Photography</span>
+        </a>
+        <nav class="site-nav" id="siteNav">
+          <button class="close-nav" id="closeNav" aria-label="Close menu">×</button>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="services.html" class="active">Services</a>
+          <a href="albums.html">Albums</a>
+          <a href="index.html#ai-assistant">AI Assistant</a>
+          <a href="appointment.html">Appointment</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero services-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-copy reveal">
+          <p class="eyebrow">Our Services</p>
+          <h1>Premium photography and cinematic storytelling — crafted for Indian weddings.</h1>
+          <p>Every service is designed to feel luxurious, personal, and beautifully delivered — from the first ritual to the final album.</p>
+        </div>
+      </section>
+
+      <!-- Smart Package Recommendation -->
+      <section class="section section-soft" id="ai-recommendation">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">AI Assistant</p>
+            <h2>Not sure which package to choose? Let AI recommend one.</h2>
+          </div>
+          <div class="ai-recommendation-form reveal">
+            <div class="form-grid">
+              <input type="text" id="ai-event-type" placeholder="Event Type (e.g. Telugu Wedding)" class="form-input" />
+              <input type="text" id="ai-budget" placeholder="Budget (e.g. ₹1,50,000)" class="form-input" />
+              <input type="text" id="ai-guest-count" placeholder="Guest Count (e.g. 500)" class="form-input" />
+              <input type="text" id="ai-location" placeholder="Location (e.g. Vijayawada)" class="form-input" />
+              <select id="ai-setting" class="form-input">
+                <option value="">Select Setting...</option>
+                <option value="Indoor">Indoor Banquet</option>
+                <option value="Outdoor">Outdoor / Resort</option>
+                <option value="Both">Both</option>
+              </select>
+              <input type="number" id="ai-days" placeholder="Number of Days (e.g. 2)" class="form-input" />
+            </div>
+            <button class="btn btn-primary" id="ai-recommend-btn" style="width: 100%;">Get Recommendation</button>
+            <div class="ai-recommendation-result" id="ai-recommend-result">
+              <!-- AI Result will appear here -->
+            </div>
+            <button class="btn btn-secondary ai-compare-btn" id="ai-compare-btn">Compare Packages Instantly</button>
+            <div class="ai-compare-result" id="ai-compare-result">
+              <!-- AI Comparison will appear here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container services-grid reveal">
+          <!-- Wedding Photography -->
+          <!-- Sacred Wedding Stories -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/bride_prep.jpg" alt="Indian wedding photography" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="3.5"/>
+                  <path d="M6.343 6.343a8 8 0 1 0 11.314 11.314A8 8 0 0 0 6.343 6.343z"/>
+                  <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+                </svg>
+              </div>
+              <p class="tag">Stories</p>
+              <h3>Sacred Wedding Stories</h3>
+              <p>Capturing the pure sanctity of your union, from the soft morning temple bells to the emotional tears of parents and the sacred tie of the Mangalsutra.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+          <!-- Films That Keep Memories Alive -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/couple_red_backdrop.jpg" alt="Wedding cinematography film" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="6" width="15" height="12" rx="2"/>
+                  <path d="M17 8.5l5-2v11l-5-2V8.5z"/>
+                  <circle cx="9.5" cy="12" r="1.5"/>
+                </svg>
+              </div>
+              <p class="tag">Films</p>
+              <h3>Films That Keep Memories Alive</h3>
+              <p>Slow-motion 4K cinematic wedding films capturing the fragrance of jasmine, parents’ soft blessings, and family laughter that lives forever.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+          <!-- Romantic Journeys (Pre-Wedding) -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/couple_holding_hands.jpg" alt="Indian couple pre-wedding shoot" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <p class="tag">Journeys</p>
+              <h3>Romantic Journeys</h3>
+              <p>A peaceful afternoon in warm golden sunlight capturing your quiet conversations and authentic, natural smiles before your wedding.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+          <!-- Traditional Ceremony Stories -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/hands_holding_coconut.jpg" alt="Traditional Indian wedding ceremony" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <p class="tag">Traditional</p>
+              <h3>Traditional Ceremony Stories</h3>
+              <p>Documenting the timeless rituals, vibrant marigold details, and Telugu customs with deep respect for ancestral warmth and heritage.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+          <!-- Little Moments of Joy -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/henna_feet.jpg" alt="Baby shoot photography" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="8" r="4"/>
+                  <path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+                  <path d="M3 9a1 1 0 0 1 1-1h1M19 8h1a1 1 0 0 1 1 1"/>
+                </svg>
+              </div>
+              <p class="tag">Innocence</p>
+              <h3>Little Moments of Joy</h3>
+              <p>Delicate, patience-first baby sessions capturing soft giggles, tiny details, and pure innocence in comfortable settings.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+          <!-- Generations Together -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/bride_henna_hands.jpg" alt="Family portrait photography" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <p class="tag">Family</p>
+              <h3>Generations Together</h3>
+              <p>Preserving the laughter, warm embraces, and quiet wisdom of your family reunions so they remain an heirloom for generations to come.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+          <!-- Candid Moments & Emotions -->
+          <article class="service-card">
+            <img loading="lazy" src="gallery/talambralu.jpg" alt="Candid Indian ceremony portrait" />
+            <div class="body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <p class="tag">Emotions</p>
+              <h3>Candid Moments & Emotions</h3>
+              <p>Unobtrusive, documentary-style photography capturing fleeting glances, natural smiles, and raw, quiet emotions as they happen.</p>
+              <a href="contact.html">Begin Your Story</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark">PB</span><span>PB Photography</span></a>
+          <p>Every family deserves memories that will live for generations. Thank you for trusting PB Photography to preserve your story.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Albums</h3>
+          <ul>
+            <li><a href="albums.html">Heirloom Albums</a></li>
+            <li><a href="albums.html">Photo Books</a></li>
+            <li><a href="albums.html">Designer Covers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="https://wa.me/919642534945" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 PB Photography. Crafting timeless memories since 2018.</p>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

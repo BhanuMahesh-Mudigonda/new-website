@@ -16,6 +16,8 @@
 .pb-luxury-loader.fade-out {
   opacity: 0;
   visibility: hidden;
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .loader-content {

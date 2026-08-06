@@ -138,7 +138,7 @@ export default function Services() {
                 <h2 className="cormorant">Custom Vision or Destination Wedding?</h2>
                 <p>Have specific traditional requirements, multi-day celebrations, or destination locations? Let's design a custom package together.</p>
                 <div className="cta-action-row">
-                  <Link to="/booking" className="button">
+                  <Link to="/booking" className="btn-gold-primary">
                     Book Session
                   </Link>
                   <Link to="/contact" className="btn-gold-outline">

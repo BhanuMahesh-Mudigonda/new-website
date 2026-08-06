@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
+import { PageTransition } from '../components/MotionWrapper'
 import { galleryService } from '../services/api'
 import './Gallery.css'
 
@@ -374,8 +375,9 @@ export default function Gallery() {
   const isAll = filter === 'all'
 
   return (
-    <>
-      {/* ── Page Header ── */}
+    <PageTransition>
+      <div className="gallery-page">
+        {/* ── Page Header ── */}
       <section className="page-header">
         <div className="container">
           <h1 className="cormorant">Fine Art Gallery</h1>
@@ -576,6 +578,7 @@ export default function Gallery() {
           onNext={nextLb}
         />
       )}
-    </>
+      </div>
+    </PageTransition>
   )
 }

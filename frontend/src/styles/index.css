@@ -52,7 +52,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6, .cormorant, .playfair {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.cormorant,
+.playfair {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   color: var(--text-main);
@@ -77,17 +84,11 @@ button {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 48px 0;
   position: relative;
 }
 
-/* Universal Page Header & Container Spacing for Fixed Header Clearance */
-.page-header {
-  padding-top: 150px !important;
-  padding-bottom: 50px !important;
-  text-align: center;
-}
-
+/* Universal Page Header & Container Spacing for Fixed Header Clearance (Balanced Hero Clearance) */
 .about-page,
 .contact-page,
 .services-page,
@@ -95,38 +96,93 @@ button {
 .gallery-page,
 .testimonials-page,
 .pricing-page,
-.faq-page {
-  padding-top: 140px !important;
+.faq-page,
+.home-page {
+  padding-top: 102px !important;
 }
 
-/* LUXURY BUTTON STYLES WITH FIXED HOVER CONTRAST */
+.page-header {
+  padding-top: 0 !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about-page,
+  .contact-page,
+  .services-page,
+  .booking-page,
+  .gallery-page,
+  .testimonials-page,
+  .pricing-page,
+  .faq-page,
+  .home-page {
+    padding-top: 88px !important;
+  }
+}
+
+/* UNIVERSAL CTA ACTION ROW & BUTTON SEPARATION */
+.cta-action-row,
+.cta-btn-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  flex-wrap: wrap !important;
+  margin-top: 24px !important;
+}
+
+/* LUXURY BUTTON STYLES WITH SHIMMER & RICH GLOW */
 .btn-gold-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 36px;
-  background: var(--accent-gold);
-  color: #081C15 !important;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #D4AF37 0%, #F4C542 100%);
+  color: #061611 !important;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: 50px;
-  border: 1px solid var(--accent-gold);
+  border: 1px solid #F4C542;
   cursor: pointer;
-  transition: var(--transition);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
   text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-gold-primary:hover::after {
+  left: 140%;
 }
 
 .btn-gold-primary:hover {
-  background: #F4C542 !important;
-  color: #081C15 !important;
-  border-color: #F4C542 !important;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(244, 197, 66, 0.5) !important;
+  background: linear-gradient(135deg, #F4C542 0%, #FFE58F 100%) !important;
+  color: #061611 !important;
+  border-color: #FFE58F !important;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(244, 197, 66, 0.6) !important;
+}
+
+.btn-gold-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4) !important;
 }
 
 .btn-gold-outline {
@@ -134,8 +190,8 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 36px;
-  background: transparent;
+  padding: 13px 30px;
+  background: rgba(212, 175, 55, 0.04);
   color: var(--accent-gold) !important;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -143,17 +199,23 @@ button {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: 50px;
-  border: 1px solid var(--accent-gold);
+  border: 1.5px solid var(--accent-gold);
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none !important;
+  backdrop-filter: blur(8px);
 }
 
 .btn-gold-outline:hover {
-  background: var(--accent-gold) !important;
-  color: #081C15 !important;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.35) !important;
+  background: linear-gradient(135deg, #D4AF37 0%, #F4C542 100%) !important;
+  color: #061611 !important;
+  border-color: #F4C542 !important;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4) !important;
+}
+
+.btn-gold-outline:active {
+  transform: translateY(1px) scale(0.98);
 }
 
 /* Glassmorphism utility card */

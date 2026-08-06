@@ -1,10 +1,9 @@
 .booking-page {
   background-color: var(--bg-primary);
-  padding-top: 140px;
 }
 
 .page-header {
-  padding: 40px 0 20px 0;
+  padding: 0 0 16px 0;
   text-align: center;
 }
 
@@ -15,17 +14,17 @@
   letter-spacing: 3px;
   color: var(--accent-gold);
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .page-header h1 {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
   color: #FFFFFF;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .page-header .subtitle {
-  font-size: 15px;
+  font-size: 14.5px;
   color: var(--text-muted);
   max-width: 680px;
   margin: 0 auto;
@@ -33,7 +32,7 @@
 }
 
 .booking-content-section {
-  padding: 40px 0 100px 0;
+  padding: 20px 0 60px 0;
 }
 
 .booking-grid {
@@ -41,22 +40,22 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 28px;
 }
 
 .booking-form-card {
-  padding: 48px;
+  padding: 28px 32px;
   border: 1px solid var(--border-gold);
   border-radius: 20px;
   background: var(--bg-secondary);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.88);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
 }
 
 .form-heading {
-  font-size: 36px;
+  font-size: 30px;
   color: #FFFFFF;
-  margin-top: 8px;
-  margin-bottom: 24px;
+  margin-top: 4px;
+  margin-bottom: 18px;
 }
 
 /* THANK YOU SUCCESS CARD */

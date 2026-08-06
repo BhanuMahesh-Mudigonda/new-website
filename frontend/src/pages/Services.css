@@ -6,30 +6,30 @@
 
 /* Fix Page Header Overlap */
 .services-page .page-header {
-  padding-top: 180px !important;
-  padding-bottom: 70px !important;
+  padding-top: 0 !important;
+  padding-bottom: 14px !important;
   text-align: center;
   background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(10, 10, 10, 0) 100%);
   border-bottom: 1px solid var(--border-gold);
 }
 
 .services-list-section {
-  padding: 80px 0;
+  padding: 36px 0;
 }
 
 .services-master-flow {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 32px;
 }
 
 /* Service Row Card (Alternating Dual Column Grid) */
 .service-row-card {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  gap: 50px;
+  gap: 32px;
   align-items: center;
-  padding: 44px;
+  padding: 24px 28px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);

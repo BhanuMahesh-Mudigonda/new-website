@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import FloatingActions from './components/FloatingActions'
 import LoadingScreen from './components/LoadingScreen'
+import Toast from './components/Toast'
+import ScrollToTopBtn from './components/ScrollToTopBtn'
 import Home from './pages/Home'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
@@ -63,6 +65,8 @@ function App() {
         </main>
         <Footer />
         <FloatingActions />
+        <ScrollToTopBtn />
+        <Toast />
       </div>
     </Router>
   )

@@ -143,9 +143,9 @@ export default function Home() {
 
   return (
     <PageTransition>
-      
-      {/* 1. HERO MASTER SECTION */}
-      <section className="hero-master-section bg-dots-pattern">
+      <div className="home-page">
+        {/* 1. HERO MASTER SECTION */}
+        <section className="hero-master-section bg-dots-pattern">
         <DustParticles count={35} />
         
         <div className="container hero-master-container">
@@ -167,8 +167,8 @@ export default function Home() {
                 Book Your Story
               </Link>
               
-              <Link to="/gallery" className="button button-outline hero-btn-large">
-                View Portfolio
+              <Link to="/gallery" className="btn-gold-outline hero-btn-large">
+                View Portfolio ↗
               </Link>
             </div>
           </FadeLeft>
@@ -459,6 +459,7 @@ export default function Home() {
         </div>
       </section>
 
+      </div>
     </PageTransition>
   )
 }

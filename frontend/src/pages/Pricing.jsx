@@ -45,7 +45,8 @@ export default function Pricing() {
 
   return (
     <PageTransition>
-      <section className="page-header">
+      <div className="pricing-page">
+        <section className="page-header">
         <div className="container">
           <h1 className="cormorant">Investment & Pricing</h1>
           <p className="subtitle">Transparent luxury pricing tiers in Indian Rupees (₹) tailored to your story</p>
@@ -248,6 +249,7 @@ export default function Pricing() {
           ]} />
         </div>
       </section>
+      </div>
     </PageTransition>
   )
 }

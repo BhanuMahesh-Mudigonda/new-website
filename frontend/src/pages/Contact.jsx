@@ -1,10 +1,16 @@
 import { motion } from 'framer-motion'
 import { PageTransition } from '../components/MotionWrapper'
+import { showToast } from '../components/Toast'
 import './Contact.css'
 
 export default function Contact() {
   const waMsgManager1 = encodeURIComponent('Hello PB Photography Manager 1! I am interested in inquiring about event dates and pricing.')
   const waMsgManager2 = encodeURIComponent('Hello PB Photography Manager 2! I want to check session availability.')
+
+  const handleCopy = (text, label) => {
+    navigator.clipboard.writeText(text)
+    showToast(`Copied ${label} (${text}) to clipboard!`)
+  }
 
   return (
     <PageTransition>
@@ -50,7 +56,10 @@ export default function Contact() {
                   <span className="hq-icon">✉️</span>
                   <div>
                     <strong>OFFICIAL EMAIL</strong>
-                    <p><a href="mailto:pbphotography0032@gmail.com">pbphotography0032@gmail.com</a></p>
+                    <p>
+                      <a href="mailto:pbphotography0032@gmail.com">pbphotography0032@gmail.com</a>
+                      <button className="copy-badge-btn" onClick={() => handleCopy('pbphotography0032@gmail.com', 'Email')}>Copy</button>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -62,7 +71,7 @@ export default function Contact() {
                 <div className="manager-card glass-card">
                   <div className="manager-header">
                     <span className="mgr-badge">MANAGER 1</span>
-                    <strong className="mgr-name">+91 96425 34945</strong>
+                    <strong className="mgr-name" onClick={() => handleCopy('+91 96425 34945', 'Manager 1 Phone')} title="Click to copy">+91 96425 34945 📋</strong>
                   </div>
                   <div className="mgr-buttons">
                     <a href="tel:+919642534945" className="action-btn call-btn">
@@ -89,7 +98,7 @@ export default function Contact() {
                 <div className="manager-card glass-card">
                   <div className="manager-header">
                     <span className="mgr-badge">MANAGER 2</span>
-                    <strong className="mgr-name">+91 80083 60032</strong>
+                    <strong className="mgr-name" onClick={() => handleCopy('+91 80083 60032', 'Manager 2 Phone')} title="Click to copy">+91 80083 60032 📋</strong>
                   </div>
                   <div className="mgr-buttons">
                     <a href="tel:+918008360032" className="action-btn call-btn">

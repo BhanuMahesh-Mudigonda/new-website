@@ -63,7 +63,8 @@ export default function Testimonials() {
 
   return (
     <PageTransition>
-      <section className="page-header">
+      <div className="testimonials-page">
+        <section className="page-header">
         <div className="container">
           <h1 className="cormorant">Client Testimonials</h1>
           <p className="subtitle">Real stories of warmth, elegance, and premium service</p>
@@ -106,13 +107,14 @@ export default function Testimonials() {
           <ZoomContainer delay={0.3} className="testimonials-cta-box glass-card">
             <h3 className="cormorant">Ready to Write Your Story?</h3>
             <p>Let us preserve your traditional customs, raw candid smiles, and timeless celebrations.</p>
-            <Link to="/booking" className="button">
+            <Link to="/booking" className="btn-gold-primary">
               Book Your Story Now
             </Link>
           </ZoomContainer>
 
         </div>
       </section>
+      </div>
     </PageTransition>
   )
 }

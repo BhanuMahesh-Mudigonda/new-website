@@ -8,11 +8,11 @@ export default function LoadingScreen() {
   useEffect(() => {
     const fadeTimer = setTimeout(() => {
       setFading(true)
-    }, 800)
+    }, 350)
 
     const removeTimer = setTimeout(() => {
       setRemoved(true)
-    }, 1200)
+    }, 650)
 
     return () => {
       clearTimeout(fadeTimer)

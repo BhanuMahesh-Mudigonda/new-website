@@ -48,7 +48,8 @@ export default function FAQ() {
 
   return (
     <PageTransition>
-      <section className="page-header">
+      <div className="faq-page">
+        <section className="page-header">
         <div className="container">
           <h1 className="cormorant">Frequently Asked Questions</h1>
           <p className="subtitle">Everything you need to know about our services & process</p>
@@ -116,6 +117,7 @@ export default function FAQ() {
           </ZoomContainer>
         </div>
       </section>
+      </div>
     </PageTransition>
   )
 }

@@ -2,7 +2,7 @@
 .hero-master-section {
   position: relative;
   width: 100%;
-  padding: 140px 0 50px 0;
+  padding: 0 0 45px 0;
   background-color: var(--bg-primary);
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 40px;
 }
 
 .hero-master-content {
@@ -26,35 +26,49 @@
   letter-spacing: 3px;
   color: var(--accent-gold);
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   display: block;
 }
 
 .hero-headline {
-  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-size: clamp(2.6rem, 4.2vw, 3.8rem);
   line-height: 1.12;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   color: var(--text-main);
 }
 
 .hero-subtext {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   font-weight: 300;
   color: var(--text-muted);
-  margin-bottom: 36px;
-  line-height: 1.7;
+  margin-bottom: 24px;
+  line-height: 1.65;
 }
 
 .hero-actions-group {
   display: flex;
   gap: 18px;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .hero-btn-large {
-  padding: 16px 36px !important;
+  padding: 13px 32px !important;
+}
+
+.hero-text-link {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+.hero-text-link:hover {
+  color: var(--accent-gold);
 }
 
 /* Elegant Constrained Hero Visual Frame */
@@ -62,6 +76,7 @@
   flex: 1;
   max-width: 520px;
   position: relative;
+  margin-top: 3px;
 }
 
 .hero-visual-container {
@@ -134,10 +149,10 @@
   gap: 10px;
 }
 
-.badge-pos-1 { top: -15px; left: -20px; }
-.badge-pos-2 { top: 60px; right: -25px; }
-.badge-pos-3 { bottom: 60px; left: -25px; }
-.badge-pos-4 { bottom: -15px; right: -15px; }
+.badge-pos-1 { top: 8px; left: -22px; }
+.badge-pos-2 { top: 70px; right: -25px; }
+.badge-pos-3 { bottom: 70px; left: -25px; }
+.badge-pos-4 { bottom: 8px; right: -16px; }
 
 .badge-icon { font-size: 18px; }
 
@@ -159,7 +174,7 @@
 .stats-bar-section {
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto 80px auto;
+  margin: 36px auto 56px auto;
   padding: 0 20px;
   position: relative;
   z-index: 10;
